@@ -1,0 +1,1436 @@
+<!doctype html>
+<html lang="en" class="bd-theme-shop">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta
+  name="description"
+  content="Bulma is a free, open source CSS framework based on Flexbox and built with Sass. It's 100% responsive, fully modular, and available for free."
+>
+
+<title>
+  The Official Bulma Shop
+ | Bulma: Free, open source, and modern CSS framework based on Flexbox
+
+</title>
+
+  <link rel="stylesheet" href="https://bulma.io/vendor/fontawesome-free-6.5.2-web/css/all.min.css">
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
+<link
+  rel="stylesheet"
+  href="https://bulma.io/assets/css/website.min.css?v=202509210324"
+>
+
+<link rel="canonical" href="https://bulma.io/shop/">
+<link
+  rel="alternate"
+  type="application/rss+xml"
+  title="Bulma: Free, open source, and modern CSS framework based on Flexbox"
+  href="https://bulma.io/atom.xml"
+>
+
+<meta property="og:url" content="https://bulma.io">
+<meta property="og:type" content="website">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@jgthms">
+<meta name="twitter:creator" content="@jgthms">
+
+<!-- Shared social media -->
+
+  <meta property="og:title" content="The Official Bulma Shop">
+  <meta name="twitter:title" content="The Official Bulma Shop">
+
+
+
+  <meta property="og:description" content="Bulma is a free, open source CSS framework based on Flexbox and built with Sass. It's 100% responsive, fully modular, and available for free.">
+  <meta name="twitter:description" content="Bulma is a free, open source CSS framework based on Flexbox and built with Sass. It's 100% responsive, fully modular, and available for free.">
+
+
+
+  <meta property="og:image" content="https://bulma.io/assets/images/bulma-banner.png">
+  <meta name="twitter:image" content="https://bulma.io/assets/images/bulma-banner.png">
+
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://bulma.io/favicons/apple-touch-icon.png?v=201701041855">
+<link rel="icon" type="image/png" href="https://bulma.io/favicons/favicon-32x32.png?v=201701041855" sizes="32x32">
+<link rel="icon" type="image/png" href="https://bulma.io/favicons/favicon-16x16.png?v=201701041855" sizes="16x16">
+<!-- link rel="manifest" href="https://bulma.io/favicons/manifest.json?v=201701041855" -->
+<link rel="mask-icon" href="https://bulma.io/favicons/safari-pinned-tab.svg?v=201701041855" color="#00d1b2">
+<link rel="shortcut icon" href="https://bulma.io/favicons/favicon.ico?v=201701041855">
+<meta name="msapplication-config" content="https://bulma.io/favicons/browserconfig.xml?v=201701041855">
+<meta name="theme-color" content="#00d1b2">
+
+  </head>
+  <body>
+    <a href="https://cssmasterclass.io/" target="_blank" class="launch-code is-animated">
+  <h3><img
+        src="https://bulma.io/assets/images/masterclass/logo-desktop.png"
+        height="40"
+        width="300"
+    />
+  </h3>
+
+  <small>
+    Learn CSS with 🎓 online interactive courses,📺 educational videos, and
+    🧑🏻‍💻project-building tutorials.
+  </small>
+</a>
+
+
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/photoswipe@5.4.4/dist/photoswipe.css">
+
+<style type="text/css">
+  :root {
+    --shop-duration: 500ms;
+  }
+
+  .shop-hero {
+    min-height: calc(100vh - 6.5rem);
+  }
+
+  .shop-hero .bd-hero {
+    position: relative;
+  }
+
+  .shop-hero .bd-hero-body {
+    position: relative;
+    margin: 0 auto;
+    max-width: 110rem;
+    width: 100%;
+  }
+
+  .shop-open-cart {
+    margin-top: 1.5rem;
+    min-width: 10em;
+  }
+
+  .shop-open-cart .tag {
+    margin: 0 -0.625em 0 0.625em;
+    padding: 0 0.5em;
+    min-width: 2em;
+    background-color: transparent;
+    color: currentColor;
+    border: 1px solid currentColor;
+  }
+
+  @media screen and (min-width: 1000px) {
+    .shop-open-cart {
+      margin-top: 0;
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 30;
+    }
+  }
+
+  .shop-cart-count {
+    background-color: var(--bulma-success-50);
+  }
+
+  .shop-cart,
+  .shop-cart-overlay {
+    bottom: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    transition-duration: var(--shop-duration);
+    transition-property: opacity;
+  }
+
+  .shop-cart {
+    opacity: 0;
+    position: fixed;
+    z-index: 40;
+    pointer-events: none;
+  }
+
+  .shop-cart-overlay {
+    position: absolute;
+    background-color: rgb(0 0 0 / 80%);
+  }
+
+  .shop-cart-menu {
+    bottom: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background: var(--bulma-background);
+    max-width: 22rem;
+    position: absolute;
+    z-index: 50;
+    transform: translateX(100%);
+    transition-duration: var(--shop-duration);
+    transition-property: transform;
+    overflow-y: auto;
+  }
+
+  .shop-cart-title {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 2rem;
+  }
+
+  .shop-empty-cart {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .shop-empty-cart .notification {
+    padding: 1.25em 1.5em;
+  }
+
+  .shop-empty-cart .notification p {
+    color: var(--bulma-text-strong);
+    margin-bottom: 0.25rem;
+  }
+
+  .shop-cart.is-active {
+    pointer-events: auto;
+    opacity: 1;
+  }
+
+  .shop-cart.is-active .shop-cart-overlay {
+    opacity: 1;
+  }
+
+  .shop-cart.is-active .shop-cart-menu {
+    transform: none;
+  }
+
+  .shop-cart-items {
+    padding: 2rem;
+    padding-top: 0;
+  }
+
+  .shop-item-image {
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+
+  .shop-item-title {
+    color: var(--bulma-text-strong);
+    font-weight: 600;
+  }
+
+  .shop-item-price {
+    float: right;
+    font-size: 0.875em;
+    margin-top: 0.125em;
+  }
+
+  .shop-item-remove {
+    float: right;
+  }
+
+  .shop-item-variant {
+    pointer-events: none;
+    padding: 0.125em 0.5em;
+  }
+
+  .shop-item-title {
+    margin-bottom: 0.25em;
+  }
+
+  .shop-item-buttons {
+    margin-top: 0.375em;
+  }
+
+  .shop-item-quantity {
+    color: var(--bulma-text-strong) !important;
+  }
+
+  .shop-cart-checkout {
+    background: var(--bulma-background);
+    border-top: 1px solid
+      hsla(
+        var(--bulma-scheme-h),
+        var(--bulma-scheme-s),
+        var(--bulma-border-l),
+        0.5
+      );
+    padding: 2rem;
+    position: sticky;
+    bottom: 0;
+  }
+
+  .shop-cart-checkout .shop-cart-close {
+    margin: -0.5em 0 0.5em;
+  }
+
+  @media screen and (min-width: 600px) {
+    .shop-cart-checkout .shop-cart-close {
+      display: none;
+    }
+  }
+
+  .shop-total {
+    margin-bottom: 1em;
+    display: flex;
+    gap: 1em;
+    align-items: start;
+    justify-content: space-between;
+  }
+
+  .shop-total-disclaimer {
+    font-size: 0.75em;
+    opacity: 0.5;
+  }
+
+  .shop-discount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 1.5rem;
+  }
+
+  .shop-discount .notification {
+    padding: 1em 2em;
+  }
+
+  .shop-discount code {
+    color: var(--bulma-success);
+    font-family: var(--bulma-family-primary);
+    padding: 0.25em 0.5em;
+  }
+
+  .shop-discount p {
+    opacity: 0.5;
+    font-size: 0.875em;
+  }
+
+  @media screen and (min-width: 800px) {
+    .shop-discount {
+      margin: 0 3rem;
+    }
+  }
+
+  .shop-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 3rem;
+    max-width: 110rem;
+    margin: 0 auto;
+  }
+
+  .shop-products.has-loaded .shop-product.is-placeholder {
+    display: none;
+  }
+
+  .shop-product {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0 !important;
+    overflow: hidden;
+  }
+
+  .shop-product .card-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .shop-product-heading {
+    align-items: center;
+    gap: 1em;
+    justify-content: space-between;
+    display: flex;
+    font-size: 1.25em;
+    margin-top: 0.25em;
+    margin-bottom: 0.5em;
+  }
+
+  .shop-product-title {
+    color: var(--bulma-text-strong);
+    font-weight: 700;
+    line-height: 1.25;
+  }
+
+  .shop-product-price {
+    color: var(--bulma-text-strong);
+    font-size: 0.875em;
+  }
+
+  .shop-product-variants {
+    margin-bottom: 0 !important;
+    margin-top: 1em;
+  }
+
+  .shop-product-select {
+    width: 100%;
+  }
+
+  .shop-product-description {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+  }
+
+  .shop-product-images {
+    position: relative;
+  }
+
+  .shop-product-images:hover .shop-product-arrow {
+    opacity: 1;
+  }
+
+  .shop-product-arrow {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+  }
+
+  .shop-product-arrow .icon {
+    background-color: rgb(0 0 0 / 10%);
+    border-radius: 9999px;
+    transition-duration: var(--shop-duration);
+    transition-property: background-color, color, opacity;
+  }
+
+  .shop-product-arrow:hover .icon {
+    background-color: rgb(0 0 0 / 50%);
+    color: white;
+  }
+
+  .shop-product-arrow:active .icon {
+    background-color: rgb(0 0 0 / 70%);
+    color: white;
+  }
+
+  .shop-product-prev {
+    left: 0;
+  }
+
+  .shop-product-next {
+    right: 0;
+  }
+
+  .shop-product-carousel {
+    display: flex;
+    transition-duration: 300ms;
+    transition-property: transform;
+  }
+
+  .shop-product-image {
+    flex-shrink: 0;
+    cursor: zoom-in;
+    overflow: hidden;
+    outline: none !important;
+  }
+
+  .shop-product-image img {
+    transition-duration: var(--shop-duration);
+    transition-property: transform;
+    transform-origin: center;
+  }
+
+  .shop-product-images:hover img {
+    transform: scale(1.04);
+  }
+
+  .shop-product-image:active img {
+    transform: scale(1);
+  }
+
+  .shop-product-heading {
+    font-size: 1.5em;
+  }
+
+  .shop-product-tagline {
+    font-size: 1.125em;
+  }
+
+  .shop-product-rest {
+    display: none;
+  }
+
+  .shop-product-rest p:not(:first-child) {
+    margin-top: var(--bulma-content-block-margin-bottom);
+  }
+
+  .shop-product-description details,
+  .shop-product-description .table-responsive {
+    margin-top: var(--bulma-content-block-margin-bottom);
+  }
+
+  .shop-product-description details {
+    cursor: pointer;
+  }
+
+  .shop-product-description .table-responsive table {
+    background-color: var(--bulma-scheme-main);
+  }
+
+  .shop-product-description .table-responsive td {
+    border-width: 1px !important;
+  }
+
+  .shop-product-buttons {
+    justify-content: space-between;
+    margin-top: 1em;
+  }
+
+  .shop-modal {
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition-property: opacity;
+    transition-duration: var(--shop-duration);
+  }
+
+  .shop-modal-content {
+    border-radius: var(--bulma-radius-large);
+    background-color: var(--bulma-background);
+    padding: 3rem;
+    opacity: 0;
+    transform: translateY(3rem);
+    transition-property: opacity, transform;
+    transition-duration: var(--shop-duration);
+  }
+
+  .shop-modal-content .shop-product-tagline {
+    color: var(--bulma-text-strong);
+    margin-bottom: 1em;
+  }
+
+  .shop-modal-content .shop-product-rest {
+    display: block;
+  }
+
+  .shop-modal-buttons {
+    justify-content: space-between;
+    margin-top: 1em;
+  }
+
+  .shop-modal-close {
+    order: 2;
+  }
+
+  .shop-modal.is-active {
+    pointer-events: auto;
+    opacity: 1;
+  }
+
+  .shop-modal.is-active .shop-modal-content {
+    opacity: 1;
+    transform: none;
+  }
+
+  #empty-cart,
+  #full-cart {
+    display: none;
+  }
+</style>
+
+<header class="bd-header">
+  <a class="bulma-logo" href="https://bulma.io/">
+    <svg width="640" height="160" viewBox="0 0 640 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M170 132.571V27.5908C170 25.5451 170.915 23.93 172.746 22.7456C174.576 21.5612 176.729 20.969 179.206 20.969H210.377C232.019 20.969 242.84 30.4441 242.84 49.3943C242.84 62.5303 238.264 71.0902 229.112 75.074C234.603 77.2275 238.748 80.2692 241.548 84.1992C244.347 88.1292 245.747 93.8627 245.747 101.4V104.791C245.747 116.743 242.84 125.437 237.026 130.875C231.211 136.312 223.351 139.031 213.445 139.031H179.206C176.514 139.031 174.307 138.385 172.584 137.093C170.861 135.801 170 134.293 170 132.571ZM190.834 120.619H209.085C219.529 120.619 224.751 114.751 224.751 103.015V100.431C224.751 94.401 223.432 90.0404 220.794 87.3486C218.156 84.6568 214.253 83.3109 209.085 83.3109H190.834V120.619ZM190.834 66.8371H208.923C213.122 66.8371 216.326 65.5989 218.533 63.1225C220.74 60.646 221.844 57.2544 221.844 52.9475C221.844 48.7483 220.686 45.4374 218.371 43.0148C216.057 40.5922 212.853 39.3809 208.762 39.3809H190.834V66.8371ZM260.283 103.015V27.4293C260.283 25.2759 261.306 23.6608 263.351 22.5841C265.397 21.5074 267.873 20.969 270.781 20.969C273.688 20.969 276.164 21.5074 278.21 22.5841C280.256 23.6608 281.279 25.2759 281.279 27.4293V103.015C281.279 115.397 287.2 121.588 299.044 121.588C310.888 121.588 316.81 115.397 316.81 103.015V27.4293C316.81 25.2759 317.833 23.6608 319.879 22.5841C321.925 21.5074 324.401 20.969 327.308 20.969C330.215 20.969 332.692 21.5074 334.738 22.5841C336.783 23.6608 337.806 25.2759 337.806 27.4293V103.015C337.806 115.72 334.28 125.061 327.227 131.036C320.175 137.012 310.781 140 299.044 140C287.308 140 277.914 137.039 270.861 131.117C263.809 125.195 260.283 115.828 260.283 103.015ZM356.703 132.409V27.4293C356.703 25.2759 357.725 23.6608 359.771 22.5841C361.817 21.5074 364.293 20.969 367.201 20.969C370.108 20.969 372.584 21.5074 374.63 22.5841C376.676 23.6608 377.699 25.2759 377.699 27.4293V120.619H417.106C419.044 120.619 420.579 121.534 421.709 123.365C422.84 125.195 423.405 127.349 423.405 129.825C423.405 132.301 422.84 134.455 421.709 136.285C420.579 138.116 419.044 139.031 417.106 139.031H365.908C363.432 139.031 361.279 138.439 359.448 137.254C357.618 136.07 356.703 134.455 356.703 132.409ZM434.872 132.409V31.467C434.872 27.9138 435.868 25.2759 437.86 23.5532C439.852 21.8304 442.355 20.969 445.37 20.969C449.354 20.969 452.423 21.6689 454.576 23.0686C456.729 24.4684 459.098 27.4832 461.682 32.1131L481.548 68.2907L501.413 32.1131C503.997 27.4832 506.393 24.4684 508.6 23.0686C510.808 21.6689 513.903 20.969 517.887 20.969C520.902 20.969 523.405 21.8304 525.397 23.5532C527.389 25.2759 528.385 27.9138 528.385 31.467V132.409C528.385 134.455 527.335 136.07 525.236 137.254C523.136 138.439 520.686 139.031 517.887 139.031C514.98 139.031 512.503 138.439 510.458 137.254C508.412 136.07 507.389 134.455 507.389 132.409V62.961L488.493 96.5545C486.985 99.354 484.616 100.754 481.386 100.754C478.264 100.754 475.949 99.354 474.441 96.5545L455.868 61.6689V132.409C455.868 134.455 454.818 136.07 452.719 137.254C450.619 138.439 448.17 139.031 445.37 139.031C442.463 139.031 439.987 138.439 437.941 137.254C435.895 136.07 434.872 134.455 434.872 132.409ZM539.529 130.31C539.529 130.094 539.637 129.556 539.852 128.694L571.023 27.1063C571.669 24.8452 573.257 23.0956 575.787 21.8573C578.318 20.6191 581.198 20 584.428 20C587.658 20 590.565 20.6191 593.149 21.8573C595.734 23.0956 597.349 24.8452 597.995 27.1063L629.166 128.694C629.381 129.556 629.489 130.094 629.489 130.31C629.489 132.678 628.035 134.724 625.128 136.447C622.221 138.17 619.26 139.031 616.245 139.031C612.261 139.031 609.892 137.631 609.139 134.832L603.001 113.351H566.016L559.879 134.832C559.125 137.631 556.756 139.031 552.773 139.031C549.65 139.031 546.662 138.197 543.809 136.528C540.956 134.859 539.529 132.786 539.529 130.31ZM570.377 96.8775H598.479L584.428 47.2948L570.377 96.8775Z" fill="black" class="bd-svg-black" />
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 110L10 40L50 0L100 50L70 80L110 120L50 160L0 110Z" fill="#00D1B2"/>
+</svg>
+
+  </a>
+
+  <nav id="js-nav" class="bd-nav">
+      
+
+<a
+  class="
+    bd-nav-item
+    bd-theme-docs
+    is-docs
+    
+    
+    
+  "
+  title="Everything you need to create a website with Bulma"
+  
+  href="https://bulma.io/documentation/"
+  
+>
+  <span class="icon">
+    <i class="fa-solid fa-book"></i>
+  </span>
+
+  
+  <span class="bd-nav-item-name">
+    
+    <span class="is-hidden-fullhd">Docs</span>
+    <span class="is-hidden is-block-fullhd">Documentation</span>
+    
+  </span>
+  
+</a>
+   
+
+<a
+  class="
+    bd-nav-item
+    bd-theme-expo
+    is-expo
+    
+    
+    
+  "
+  title="Official Bulma showcase"
+  
+  href="https://bulma.io/expo/"
+  
+>
+  <span class="icon">
+    <i class="fa-solid fa-star"></i>
+  </span>
+
+  
+  <span class="bd-nav-item-name">
+     Expo 
+  </span>
+  
+</a>
+   
+
+<a
+  class="
+    bd-nav-item
+    bd-theme-love
+    is-love
+    
+    
+    
+  "
+  title="Fans of Bulma around the world"
+  
+  href="https://bulma.io/love/"
+  
+>
+  <span class="icon">
+    <i class="fa-solid fa-heart"></i>
+  </span>
+
+  
+  <span class="bd-nav-item-name">
+     Love 
+  </span>
+  
+</a>
+   
+
+<a
+  class="
+    bd-nav-item
+    bd-theme-sponsor
+    is-sponsor
+    
+    
+    
+  "
+  title="Sponsor Bulma and Open Source via Patreon and GitHub"
+  
+  href="https://bulma.io/become-a-bulma-sponsor/"
+  
+>
+  <span class="icon">
+    <i class="fa-brands fa-patreon"></i>
+  </span>
+
+  
+  <span class="bd-nav-item-name">
+     Sponsor 
+  </span>
+  
+</a>
+ 
+
+    <div class="bd-nav-icons">
+        
+
+<a
+  class="
+    bd-nav-item
+    bd-theme-github
+    is-github
+    
+      is-icon
+    
+    
+    
+  "
+  title="Open Source on GitHub"
+  
+  href="https://github.com/jgthms/bulma"
+  target="_blank"
+  
+>
+  <span class="icon">
+    <i class="fa-brands fa-github-alt fa-lg"></i>
+  </span>
+
+  
+</a>
+   
+
+<a
+  class="
+    bd-nav-item
+    bd-theme-twitter
+    is-twitter
+    
+      is-icon
+    
+    
+    
+  "
+  title="Follow me on Twitter"
+  
+  href="https://twitter.com/jgthms"
+  target="_blank"
+  
+>
+  <span class="icon">
+    <i class="fa-brands fa-twitter fa-lg"></i>
+  </span>
+
+  
+</a>
+ 
+
+      <button class="bd-nav-item is-search is-icon">
+        <span class="icon">
+          <i class="fas fa-search fa-lg"></i>
+        </span>
+      </button>
+
+      <button
+        class="bd-nav-item is-icon is-ellipsis js-burger"
+        data-target="js-more"
+      >
+        <span class="icon">
+          <i class="fas fa-ellipsis-h fa-lg"></i>
+        </span>
+      </button>
+
+      <div id="js-more" class="bd-nav-menu is-more js-menu">
+          
+
+<a
+  class="
+    bd-nav-item
+    bd-theme-made-with-bulma
+    is-made-with-bulma
+    
+    
+    
+  "
+  title="The official community badge"
+  
+  href="https://bulma.io/made-with-bulma/"
+  
+>
+  <span class="icon">
+    <i class="fa-solid fa-certificate"></i>
+  </span>
+
+  
+  <span class="bd-nav-item-name">
+     Made with Bulma 
+  </span>
+  
+</a>
+   
+
+<a
+  class="
+    bd-nav-item
+    bd-theme-backers
+    is-backers
+    
+    
+    
+  "
+  title="Everyone who is supporting Bulma via Patreon and GitHub"
+  
+  href="https://bulma.io/backers/"
+  
+>
+  <span class="icon">
+    <i class="fa-solid fa-hand-holding-heart"></i>
+  </span>
+
+  
+  <span class="bd-nav-item-name">
+     Backers 
+  </span>
+  
+</a>
+   
+
+<a
+  class="
+    bd-nav-item
+    bd-theme-brand
+    is-brand
+    
+    
+    
+  "
+  title="The official Bulma logos"
+  
+  href="https://bulma.io/brand/"
+  
+>
+  <span class="icon">
+    <i class="fa-solid fa-medal"></i>
+  </span>
+
+  
+  <span class="bd-nav-item-name">
+     Bulma Brand 
+  </span>
+  
+</a>
+   
+
+<a
+  class="
+    bd-nav-item
+    bd-theme-extensions
+    is-extensions
+    
+    
+    
+  "
+  title="Side projects to enhance Bulma"
+  
+  href="https://bulma.io/extensions/"
+  
+>
+  <span class="icon">
+    <i class="fa-solid fa-plug"></i>
+  </span>
+
+  
+  <span class="bd-nav-item-name">
+     Bulma Extensions 
+  </span>
+  
+</a>
+ 
+      </div>
+    </div>
+
+    <a
+      class="button is-primary bd-nav-mobile-download"
+      href="https://github.com/jgthms/bulma/releases/download/1.0.4/bulma-1.0.4.zip"
+    >
+      Download
+    </a>
+  </nav>
+
+  <div class="bd-nav-themes">
+    <button id="js-cycle" class="bd-cycle js-burger" data-target="js-themes">
+      <div class="bd-cycles">
+        <div class="bd-cycle-sun">
+          <span class="icon">
+            <i class="fas fa-lg fa-sun" aria-hidden="true"></i>
+          </span>
+        </div>
+
+        <div class="bd-cycle-moon">
+          <span class="icon">
+            <i class="fas fa-lg fa-moon" aria-hidden="true"></i>
+          </span>
+        </div>
+      </div>
+    </button>
+
+    <div id="js-themes" class="bd-nav-menu is-cycles js-menu js-themes">
+      <button
+        data-scheme="light"
+        class="bd-nav-item is-sun"
+        aria-label="Light mode"
+      >
+        <span class="icon">
+          <i class="fas fa-sun" aria-hidden="true"></i>
+        </span>
+        <span>Light</span>
+      </button>
+
+      <button
+        data-scheme="dark"
+        class="bd-nav-item is-moon"
+        aria-label="Dark mode"
+      >
+        <span class="icon">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </span>
+        <span>Dark</span>
+      </button>
+
+      <button
+        data-scheme="system"
+        class="bd-nav-item is-system"
+        aria-label="System mode"
+      >
+        <span class="icon">
+          <i class="fas fa-desktop" aria-hidden="true"></i>
+        </span>
+        <span>System</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="bd-nav-search">
+    <button
+      class="bd-nav-item is-search-desktop is-icon js-burger"
+      data-target="js-search"
+    >
+      <span class="icon">
+        <i class="fas fa-search fa-lg"></i>
+      </span>
+    </button>
+
+    <div id="js-search" class="bd-nav-menu is-search js-menu">
+      <input id="algoliaSearch" class="input" type="text" placeholder="Search" />
+    </div>
+  </div>
+
+  <a
+    class="button is-primary bd-nav-desktop-download"
+    href="https://github.com/jgthms/bulma/releases/download/1.0.4/bulma-1.0.4.zip"
+  >
+    Download
+  </a>
+
+  <button class="navbar-burger bd-nav-burger js-burger" data-target="js-nav">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</header>
+
+
+
+
+<div class="shop-hero">
+  <section class="bd-hero">
+    <div class="bd-hero-body">
+      <h1 class="bd-hero-title algolia-lvl0">
+        The Official Bulma Shop
+      </h1>
+
+      <hr class="bd-hr">
+
+      <h2 class="bd-hero-subtitle algolia-lvl1">
+        Get yourself some Bulma swag.
+      </h2>
+
+      <button id="open-cart" class="shop-open-cart button">
+        <span class="icon">
+          <i class="fa-solid fa-bag-shopping"></i>
+        </span>
+        <span>Open Cart</span>
+        <span id="cart-count" class="shop-cart-count tag" style="display: none;">8</span>
+      </button>
+    </div>
+  </section>
+
+  <div class="shop-discount">
+    <div class="notification is-success">
+      Get <strong>20% off</strong> with code <code>FLEXBOX</code>
+      <p>Enter at checkout. Only available until the end of the month!</p>
+    </div>
+  </div>
+
+  <div id="shop" class="section">
+    <div id="cart" class="shop-cart">
+      <div id="cart-overlay" class="shop-cart-overlay shop-cart-close"></div>
+
+      <div class="shop-cart-menu">
+        <p class="shop-cart-title title is-4">Cart</p>
+
+        <div id="empty-cart" class="shop-empty-cart">
+          <div class="notification is-dark">
+            <p>Your cart is empty!</p>
+            <button class="button is-success shop-cart-close">
+              Get Shopping
+            </button>
+          </div>
+        </div>
+
+        <div id="full-cart">
+          <div id="cart-items" class="shop-cart-items"></div>
+          <div id="cart-checkout" class="shop-cart-checkout"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="products" data-count="8" class="shop-products">
+      
+        
+<div class="card shop-product is-placeholder">
+  <figure class="shop-product-image image is-square is-skeleton">
+    <img
+      src="https://cdn.shopify.com/s/files/1/0837/0451/2860/files/unisex-basic-softstyle-t-shirt-white-front-6665a0551b5c8.jpg?v=1717936223"
+    />
+  </figure>
+
+  <div class="card-content">
+    <div class="shop-product-heading">
+      <h3 class="shop-product-title is-skeleton">The Bulma T-Shirt</h3>
+      <div class="shop-product-price">
+        <span class="shop-price is-skeleton">$15</span>
+      </div>
+    </div>
+
+    <div class="shop-product-description content">
+      <div class="shop-product-tagline content is-skeleton">
+        Show your CSS skills and add a little extra motivation with the
+        official Bulma sticker. A perfect reminder that design can be easy
+        with your favorite framework.
+      </div>
+    </div>
+
+    <div class="shop-product-buttons buttons">
+      <button class="button is-skeleton">Add to cart</button
+      ><button class="button is-text is-skeleton">Learn more</button>
+    </div>
+  </div>
+</div>
+
+      
+        
+<div class="card shop-product is-placeholder">
+  <figure class="shop-product-image image is-square is-skeleton">
+    <img
+      src="https://cdn.shopify.com/s/files/1/0837/0451/2860/files/unisex-basic-softstyle-t-shirt-white-front-6665a0551b5c8.jpg?v=1717936223"
+    />
+  </figure>
+
+  <div class="card-content">
+    <div class="shop-product-heading">
+      <h3 class="shop-product-title is-skeleton">The Bulma T-Shirt</h3>
+      <div class="shop-product-price">
+        <span class="shop-price is-skeleton">$15</span>
+      </div>
+    </div>
+
+    <div class="shop-product-description content">
+      <div class="shop-product-tagline content is-skeleton">
+        Show your CSS skills and add a little extra motivation with the
+        official Bulma sticker. A perfect reminder that design can be easy
+        with your favorite framework.
+      </div>
+    </div>
+
+    <div class="shop-product-buttons buttons">
+      <button class="button is-skeleton">Add to cart</button
+      ><button class="button is-text is-skeleton">Learn more</button>
+    </div>
+  </div>
+</div>
+
+      
+        
+<div class="card shop-product is-placeholder">
+  <figure class="shop-product-image image is-square is-skeleton">
+    <img
+      src="https://cdn.shopify.com/s/files/1/0837/0451/2860/files/unisex-basic-softstyle-t-shirt-white-front-6665a0551b5c8.jpg?v=1717936223"
+    />
+  </figure>
+
+  <div class="card-content">
+    <div class="shop-product-heading">
+      <h3 class="shop-product-title is-skeleton">The Bulma T-Shirt</h3>
+      <div class="shop-product-price">
+        <span class="shop-price is-skeleton">$15</span>
+      </div>
+    </div>
+
+    <div class="shop-product-description content">
+      <div class="shop-product-tagline content is-skeleton">
+        Show your CSS skills and add a little extra motivation with the
+        official Bulma sticker. A perfect reminder that design can be easy
+        with your favorite framework.
+      </div>
+    </div>
+
+    <div class="shop-product-buttons buttons">
+      <button class="button is-skeleton">Add to cart</button
+      ><button class="button is-text is-skeleton">Learn more</button>
+    </div>
+  </div>
+</div>
+
+      
+        
+<div class="card shop-product is-placeholder">
+  <figure class="shop-product-image image is-square is-skeleton">
+    <img
+      src="https://cdn.shopify.com/s/files/1/0837/0451/2860/files/unisex-basic-softstyle-t-shirt-white-front-6665a0551b5c8.jpg?v=1717936223"
+    />
+  </figure>
+
+  <div class="card-content">
+    <div class="shop-product-heading">
+      <h3 class="shop-product-title is-skeleton">The Bulma T-Shirt</h3>
+      <div class="shop-product-price">
+        <span class="shop-price is-skeleton">$15</span>
+      </div>
+    </div>
+
+    <div class="shop-product-description content">
+      <div class="shop-product-tagline content is-skeleton">
+        Show your CSS skills and add a little extra motivation with the
+        official Bulma sticker. A perfect reminder that design can be easy
+        with your favorite framework.
+      </div>
+    </div>
+
+    <div class="shop-product-buttons buttons">
+      <button class="button is-skeleton">Add to cart</button
+      ><button class="button is-text is-skeleton">Learn more</button>
+    </div>
+  </div>
+</div>
+
+      
+        
+<div class="card shop-product is-placeholder">
+  <figure class="shop-product-image image is-square is-skeleton">
+    <img
+      src="https://cdn.shopify.com/s/files/1/0837/0451/2860/files/unisex-basic-softstyle-t-shirt-white-front-6665a0551b5c8.jpg?v=1717936223"
+    />
+  </figure>
+
+  <div class="card-content">
+    <div class="shop-product-heading">
+      <h3 class="shop-product-title is-skeleton">The Bulma T-Shirt</h3>
+      <div class="shop-product-price">
+        <span class="shop-price is-skeleton">$15</span>
+      </div>
+    </div>
+
+    <div class="shop-product-description content">
+      <div class="shop-product-tagline content is-skeleton">
+        Show your CSS skills and add a little extra motivation with the
+        official Bulma sticker. A perfect reminder that design can be easy
+        with your favorite framework.
+      </div>
+    </div>
+
+    <div class="shop-product-buttons buttons">
+      <button class="button is-skeleton">Add to cart</button
+      ><button class="button is-text is-skeleton">Learn more</button>
+    </div>
+  </div>
+</div>
+
+      
+        
+<div class="card shop-product is-placeholder">
+  <figure class="shop-product-image image is-square is-skeleton">
+    <img
+      src="https://cdn.shopify.com/s/files/1/0837/0451/2860/files/unisex-basic-softstyle-t-shirt-white-front-6665a0551b5c8.jpg?v=1717936223"
+    />
+  </figure>
+
+  <div class="card-content">
+    <div class="shop-product-heading">
+      <h3 class="shop-product-title is-skeleton">The Bulma T-Shirt</h3>
+      <div class="shop-product-price">
+        <span class="shop-price is-skeleton">$15</span>
+      </div>
+    </div>
+
+    <div class="shop-product-description content">
+      <div class="shop-product-tagline content is-skeleton">
+        Show your CSS skills and add a little extra motivation with the
+        official Bulma sticker. A perfect reminder that design can be easy
+        with your favorite framework.
+      </div>
+    </div>
+
+    <div class="shop-product-buttons buttons">
+      <button class="button is-skeleton">Add to cart</button
+      ><button class="button is-text is-skeleton">Learn more</button>
+    </div>
+  </div>
+</div>
+
+      
+        
+<div class="card shop-product is-placeholder">
+  <figure class="shop-product-image image is-square is-skeleton">
+    <img
+      src="https://cdn.shopify.com/s/files/1/0837/0451/2860/files/unisex-basic-softstyle-t-shirt-white-front-6665a0551b5c8.jpg?v=1717936223"
+    />
+  </figure>
+
+  <div class="card-content">
+    <div class="shop-product-heading">
+      <h3 class="shop-product-title is-skeleton">The Bulma T-Shirt</h3>
+      <div class="shop-product-price">
+        <span class="shop-price is-skeleton">$15</span>
+      </div>
+    </div>
+
+    <div class="shop-product-description content">
+      <div class="shop-product-tagline content is-skeleton">
+        Show your CSS skills and add a little extra motivation with the
+        official Bulma sticker. A perfect reminder that design can be easy
+        with your favorite framework.
+      </div>
+    </div>
+
+    <div class="shop-product-buttons buttons">
+      <button class="button is-skeleton">Add to cart</button
+      ><button class="button is-text is-skeleton">Learn more</button>
+    </div>
+  </div>
+</div>
+
+      
+        
+<div class="card shop-product is-placeholder">
+  <figure class="shop-product-image image is-square is-skeleton">
+    <img
+      src="https://cdn.shopify.com/s/files/1/0837/0451/2860/files/unisex-basic-softstyle-t-shirt-white-front-6665a0551b5c8.jpg?v=1717936223"
+    />
+  </figure>
+
+  <div class="card-content">
+    <div class="shop-product-heading">
+      <h3 class="shop-product-title is-skeleton">The Bulma T-Shirt</h3>
+      <div class="shop-product-price">
+        <span class="shop-price is-skeleton">$15</span>
+      </div>
+    </div>
+
+    <div class="shop-product-description content">
+      <div class="shop-product-tagline content is-skeleton">
+        Show your CSS skills and add a little extra motivation with the
+        official Bulma sticker. A perfect reminder that design can be easy
+        with your favorite framework.
+      </div>
+    </div>
+
+    <div class="shop-product-buttons buttons">
+      <button class="button is-skeleton">Add to cart</button
+      ><button class="button is-text is-skeleton">Learn more</button>
+    </div>
+  </div>
+</div>
+
+      
+    </div>
+  </div>
+</div>
+
+<div id="shop-modal" class="shop-modal modal">
+  <div class="shop-modal-close modal-background"></div>
+
+  <div class="shop-modal-content modal-content">
+    <div class="modal-title"></div>
+
+    <div class="modal-body block"></div>
+
+    <div class="shop-modal-buttons buttons"></div>
+  </div>
+
+  <button
+    class="shop-modal-close modal-close is-large"
+    aria-label="close"
+  ></button>
+</div>
+
+<script src="https://unpkg.com/@shopify/storefront-api-client@1.0.0/dist/umd/storefront-api-client.min.js"></script>
+<script src="https://unpkg.com/photoswipe@5.4.4/dist/umd/photoswipe.umd.min.js"></script>
+<script src="https://unpkg.com/photoswipe@5.4.4/dist/umd/photoswipe-lightbox.umd.min.js"></script>
+<script src="https://bulma.io/assets/vendor/cupcakes-3.1.0.min.js"></script>
+
+<script>
+  window.addEventListener("load", function(){
+  window.cupcakeconsent.initialise({
+    "content": {
+      "message": "Just so you know, this website uses cookies.",
+      "dismiss": "<span>👍</span> Got it!",
+      "link": "What are cookies?"
+    }
+  })});
+</script>
+
+<script type="text/javascript" src="https://bulma.io/assets/javascript/shop.js"></script>
+
+
+    
+
+    
+
+    <footer class="bd-footer footer has-text-centered">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-4">
+        <h4 class="bd-footer-title">
+  <strong xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Bulma</strong> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://jgthms.com" property="cc:attributionName" rel="cc:attributionURL" target="_blank">Jeremy Thomas</a>.
+</h4>
+
+<div class="bd-footer-iframe">
+  <a href="https://twitter.com/jgthms" class="button is-twitter" data-related="jgthms:Creator of Bulma">
+    <span class="icon"><i class="fab fa-twitter"></i></span>
+    <span>Follow @jgthms</span>
+  </a>
+</div>
+
+      </div>
+      <div class="column is-4">
+        <h4 class="bd-footer-title">
+  <strong>Contribute</strong> on GitHub
+</h4>
+
+<div class="bd-footer-iframe is-github">
+  <iframe src="https://ghbtns.com/github-btn.html?user=jgthms&repo=bulma&type=star&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+  <iframe src="https://ghbtns.com/github-btn.html?user=jgthms&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="170px" height="30px"></iframe>
+</div>
+
+      </div>
+      <div class="column is-4">
+        <h4 class="bd-footer-title">
+  <strong>Share</strong> on social media
+</h4>
+
+<div class="bd-footer-iframe">
+  <a href="https://twitter.com/share" class="button is-twitter" data-text="Bulma: Free, open source, and modern CSS framework based on Flexbox" data-url="https://bulma.io" data-count="horizontal" data-via="jgthms" data-related="jgthms:Creator of Bulma">
+    <span class="icon"><i class="fab fa-twitter"></i></span>
+    <span>Twitter</span>
+  </a>
+
+  <a class="button is-facebook" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fbulma.io">
+    <span class="icon"><i class="fab fa-facebook"></i></span>
+    <span>Facebook</span>
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <div class="bd-footer-tsp has-text-centered">
+      Source code licensed <a href="https://opensource.org/licenses/mit-license.php" target="_blank">MIT</a>.
+      Website content licensed <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
+    </div>
+  </div>
+</footer>
+
+
+    <script src="https://bulma.io/assets/vendor/clipboard-2.0.11.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script type="text/javascript"> docsearch({
+      apiKey: 'cb93c14bebd90678e789c946d95ea94d',
+      indexName: 'bulma',
+      inputSelector: '#algoliaSearch',
+      debug: false // Set debug to true if you want to inspect the dropdown
+    });
+    </script>
+    <script src="https://bulma.io/assets/javascript/main.js"></script>
+    <div id="bulma-customizer-app" class="is-hidden-mobile"></div>
+<div id="scope" class="is-hidden">
+  <div class="breadcrumb"></div>
+  <div class="card"></div>
+  <div class="dropdown"></div>
+  <div class="menu"></div>
+  <div class="message"></div>
+  <div class="modal"></div>
+  <div class="navbar"></div>
+  <div class="pagination"></div>
+  <div class="panel"></div>
+  <div class="tabs"></div>
+  <div class="box"></div>
+  <div class="content"></div>
+  <div class="delete"></div>
+  <div class="icon"></div>
+  <div class="notification"></div>
+  <div class="progress"></div>
+  <div class="table"></div>
+  <div class="tag"></div>
+  <div class="title"></div>
+  <input class="input" />
+  <div class="file"></div>
+  <div class="columns"></div>
+  <div class="grid"></div>
+  <div class="footer"></div>
+  <div class="hero"></div>
+  <div class="media"></div>
+  <div class="section"></div>
+</div>
+
+<link
+  rel="stylesheet"
+  href="https://bulma.io/assets/javascript/bulma-customizer/index.css"
+/>
+<script
+  defer
+  src="https://bulma.io/assets/javascript/bulma-customizer/index.js"
+></script>
+
+    <div id="masterclass" class="masterclass">
+  <div id="masterclass-background" class="masterclass-background"></div>
+
+  <a class="masterclass-body" href="https://cssmasterclass.io/" target="_blank">
+    <div class="masterclass-content is-hidden-desktop">
+      <img
+        src="https://bulma.io/assets/images/masterclass/logo-mobile.png"
+        height="68"
+        width="240"
+      />
+      <img
+        src="https://bulma.io/assets/images/masterclass/text-mobile.png"
+        height="99"
+        width="228"
+      />
+      <div class="shine">
+        <span>Get started for Free</span>
+      </div>
+    </div>
+
+    <div class="masterclass-content is-hidden-touch">
+      <img
+        src="https://bulma.io/assets/images/masterclass/logo-desktop.png"
+        height="50"
+        width="378"
+      />
+      <img
+        src="https://bulma.io/assets/images/masterclass/text-desktop.png"
+        height="58"
+        width="571"
+      />
+      <div class="shine">
+        <span>Get started for Free</span>
+      </div>
+    </div>
+  </a>
+
+  <button
+    id="masterclass-close"
+    class="modal-close is-large"
+    aria-label="close"
+  ></button>
+</div>
+
+  </body>
+</html>
